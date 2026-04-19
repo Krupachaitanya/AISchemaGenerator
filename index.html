@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Schema Generator - VS Code Extension</title>
+    <meta name="description" content="Instantly generate a structured backend project and APIs directly inside VS Code.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using Lucide for modern icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="blob-bg blob-1"></div>
+        <div class="blob-bg blob-2"></div>
+        <div class="blob-bg blob-3"></div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container hero-container">
+                <div class="badge glass-effect">
+                    <span class="pulse-dot"></span> VS Code Extension
+                </div>
+                <h1 class="gradient-text">AI Schema Generator</h1>
+                <p class="hero-subtitle">Instantly generate a structured backend project and APIs directly inside VS Code.</p>
+                
+                <div class="hero-actions">
+                    <a href="#how-it-works" class="btn btn-primary">
+                        <i data-lucide="play-circle"></i> Get Started
+                    </a>
+                    <a href="#features" class="btn btn-secondary glass-effect">
+                        <i data-lucide="info"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is this? & Features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>What is this?</h2>
+                    <p>AI Schema Generator is a VS Code extension that helps you generate complete projects, auto-create config/files, and build APIs instantly.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card glass-effect reveal">
+                        <div class="icon-wrapper">
+                            <i data-lucide="folder-tree"></i>
+                        </div>
+                        <h3>1. One-click Schema Creation</h3>
+                        <p>Creates project structure automatically (Config/, Data/, ForFrontEnd/, V1/). Generates essential files like <code>.env</code>, <code>app.js</code>, and <code>package.json</code>.</p>
+                    </div>
+
+                    <div class="feature-card glass-effect reveal delay-1">
+                        <div class="icon-wrapper">
+                            <i data-lucide="blocks"></i>
+                        </div>
+                        <h3>2. API Builder</h3>
+                        <p>Converts your generated schema into working APIs. Provides a ready-to-run Node.js backend seamlessly.</p>
+                    </div>
+
+                    <div class="feature-card glass-effect reveal delay-2">
+                        <div class="icon-wrapper">
+                            <i data-lucide="workflow"></i>
+                        </div>
+                        <h3>3. Integrated Workflow</h3>
+                        <p>Everything happens inside VS Code. No manual setup, no boilerplate writing, and no manual folder creation required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section glass-section">
+            <div class="container flex-container items-start">
+                <div class="content-side reveal">
+                    <h2>How It Works</h2>
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h4>Open Command Palette</h4>
+                            <p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h4>Run Command</h4>
+                            <p>Type and run: <code>ext openUI</code></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h4>Generate</h4>
+                            <p>Click: ✅ Create Schema &nbsp;➔&nbsp; ✅ Build API</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-side glass-effect reveal delay-1">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">Running the Project</span>
+                    </div>
+                    <pre><code><span class="comment"># After schema generation:</span>
+<span class="command">npm</span> install
+<span class="command">npm</span> run start
+
+<span class="output-text">Output:</span>
+<span class="success">Example app listening on port 3000</span>
+<span class="link">http://localhost:3000</span></code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demo Section -->
+        <section id="video-demo" class="section glass-section">
+            <div class="container text-center reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading); font-weight: 700;">Watch It In Action</h2>
+                <p class="hero-subtitle" style="margin-bottom: 2.5rem;">See how to setup the extension and run commands instantly.</p>
+                
+                <div class="video-container glass-effect mx-auto">
+                    <!-- Replace the src URL with your own local MP4 path like "demo.mp4" -->
+                    <video controls autoplay loop muted playsinline class="demo-video">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structure Section -->
+        <section id="structure" class="section">
+            <div class="container flex-container items-center">
+                <div class="structure-visual glass-effect reveal">
+                    <div class="tree-line">📁 project-root/</div>
+                    <div class="tree-line tree-indent">├── 📁 Config/</div>
+                    <div class="tree-line tree-indent">├── 📁 Data/</div>
+                    <div class="tree-line tree-indent">├── 📁 ForFrontEnd/</div>
+                    <div class="tree-line tree-indent">├── 📁 V1/</div>
+                    <div class="tree-line tree-indent">│</div>
+                    <div class="tree-line tree-indent">├── 📄 .env</div>
+                    <div class="tree-line tree-indent">├── 📄 .env.local</div>
+                    <div class="tree-line tree-indent">├── 📄 app.js</div>
+                    <div class="tree-line tree-indent">└── 📄 package.json</div>
+                </div>
+
+                <div class="content-side reveal delay-1">
+                    <h2>Generated Structure</h2>
+                    <p>Get a robust, scalable folder architecture created in milliseconds. Say goodbye to manual folder structuring and repetitive boilerplate.</p>
+                    
+                    <h3 class="margin-top-2">✅ Why This Exists</h3>
+                    <ul class="check-list">
+                        <li>Eliminate repetitive project setup</li>
+                        <li>Reduce boilerplate coding</li>
+                        <li>Avoid manual folder structuring</li>
+                        <li class="highlight-item">Replace it with: ⚡ One-click backend generation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Grid (Design Philosophy & Limitations) -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-box glass-effect reveal">
+                        <div class="box-header">
+                            <i data-lucide="target" class="text-accent"></i>
+                            <h3>Design Philosophy</h3>
+                        </div>
+                        <ul class="simple-list">
+                            <li>Orchestration over complexity</li>
+                            <li>Zero manual setup</li>
+                            <li>Fast backend bootstrapping</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box glass-effect reveal delay-1">
+                        <div class="box-header">
+                            <i data-lucide="alert-triangle" class="text-warning"></i>
+                            <h3>Current Scope & Limits</h3>
+                        </div>
+                        <ul class="simple-list">
+                            <li>Only essential schema generation is supported</li>
+                            <li>Focus is on speed, not customization</li>
+                            <li>Column-level customization is minimal</li>
+                            <li>Some endpoints (GET/POST variants) may be limited</li>
+                            <li>No schema editor UI yet</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box glass-effect reveal delay-2">
+                        <div class="box-header">
+                            <i data-lucide="lightbulb" class="text-primary"></i>
+                            <h3>Future Improvements</h3>
+                        </div>
+                        <ul class="simple-list">
+                            <li>Schema editor inside UI</li>
+                            <li>API preview panel</li>
+                            <li>Progress indicators</li>
+                            <li>Selective rebuild</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box glass-effect reveal delay-3">
+                        <div class="box-header">
+                            <i data-lucide="code" class="text-secondary"></i>
+                            <h3>Developer Notes</h3>
+                        </div>
+                        <ul class="simple-list">
+                            <li>Built as a VS Code Extension</li>
+                            <li>Uses Webview for UI</li>
+                            <li>Node.js backend generation</li>
+                            <li>File system driven architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary / Footer CTA -->
+        <section class="section final-cta reveal">
+            <div class="container text-center cta-container glass-effect">
+                <h2 class="gradient-text">🏁 Summary</h2>
+                <div class="summary-content">
+                    <p>If you want to:</p>
+                    <ul class="inline-list">
+                        <li>Start backend projects instantly</li>
+                        <li>Avoid setup overhead</li>
+                        <li>Focus on actual logic</li>
+                    </ul>
+                    <p class="highlight-text">This tool gives you a ready-to-run foundation in seconds.</p>
+                    <p class="muted-text">Built with focus on simplicity and speed.</p>
+                </div>
+                <a href="#how-it-works" class="btn btn-primary bounce-anim">Try It Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Keshavsoft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
